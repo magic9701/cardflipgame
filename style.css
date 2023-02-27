@@ -1,0 +1,149 @@
+body{
+  margin: 5vw;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 87%;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 7% 1 1;
+  height: 7vw;
+  border: 2px solid #353333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.card:hover {
+	box-shadow : 3px 3px 1px rgba(0,0,0,0.2);
+  transform : scale(1.02)
+  rotate(1deg)
+}
+
+.back {
+  background: url('撲克牌背-2.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+#header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  font-family: 'Mynerve', cursive;
+  font-family: 'Rajdhani', sans-serif;
+}
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#header .title img {
+  max-width: 3em;
+}
+#header .title h2 {
+  padding-left: 0.5em;
+}
+#header .score {
+  margin: 0;
+  color: #000000;
+}
+#header .tried {
+  margin-top: 0;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #f74141;
+  }
+}
+
+/* Game Start Page */
+.game-mode-select {
+  background-color: aqua;
+  width: 60vw;
+  height: auto;
+}
+
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  margin: 0;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.9);
+  width: 90vw;
+  padding: 60px 0;
+  font-family: 'Mynerve', cursive;
+  font-family: 'Rajdhani', sans-serif;
+}
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+.start-again {
+  display: flex;
+  justify-content: center;
+  margin-top: 1VW;
+}
+#start-again {
+  font-size: 2em;
+  font-family: 'Mynerve', cursive;
+  font-family: 'Rajdhani', sans-serif;
+  background: rgb(93, 215, 229);
+  background: linear-gradient(0deg, rgba(93, 215, 229, 1) 0%, rgb(18, 223, 246) 100%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+#start-again:hover {
+  background: rgb(142, 234, 214);
+  background: linear-gradient(0deg, rgba(142, 234, 214,1) 0%, rgb(108, 247, 217) 100%);
+}
